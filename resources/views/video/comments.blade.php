@@ -1,3 +1,10 @@
+<hr>
+
+		<h4>Comentarios </h4>
+
+<hr>
+
+
 <form class="col-md-4" method="post" action="">
 	
 

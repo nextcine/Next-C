@@ -75,6 +75,14 @@
         @yield('content')
     </div>
 
+    <!-- pie de pagina  -->
+    <footer class="col-md-10 col-md-offset-1">
+        <hr>
+
+        next-C producciones   Bogota Colombia 
+
+    </footer>
+
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>
 </body>
