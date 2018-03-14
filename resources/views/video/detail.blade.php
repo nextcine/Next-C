@@ -8,7 +8,7 @@
 
 		<div class="col-md-8">
 			
-			<video controls id="video-player">
+			<video  width="900" height="300" id="video-player" controls>
 
 				<source src="{{route('fileVideo',['filename'=> $video->video_path])}}" >
 				
@@ -37,6 +37,8 @@
 					
 
 			</div>
+
+			@include('video.comments')
 		</div>
 
 </div>
