@@ -12,7 +12,9 @@ class Video extends Model
 
    public function comments(){
 
-return $this->hasMany('App\Comment');
+
+   		// se hace la recion con los videos , se ordenan los comentarios en orden descendente
+return $this->hasMany('App\Comment')->orderby('id','desc');
 
    }
 

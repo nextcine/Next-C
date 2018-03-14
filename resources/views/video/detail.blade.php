@@ -37,7 +37,7 @@
 					
 
 			</div>
-
+		<!-- incluye los comentarios del sitio  -->
 			@include('video.comments')
 		</div>
 

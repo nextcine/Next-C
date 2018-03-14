@@ -59,3 +59,12 @@ Route::get('/video-file/{filename}', array(
 		'uses'=> 'VideoController@getVideo'
 
 )); 
+
+
+route::post('/comment', array (
+
+	'as'=>'comment',
+	'middleware'=>'auth',
+	'uses' =>'CommentController@store'
+
+)); 
