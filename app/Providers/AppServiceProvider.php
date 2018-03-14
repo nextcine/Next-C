@@ -1,6 +1,6 @@
 <?php
 
-namespace nextc\Providers;
+namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
 
