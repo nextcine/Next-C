@@ -214,7 +214,7 @@ class VideoController extends Controller
            return redirect()->route('videoSearch',array('search'=>$search));
 
         }
-            if (is_null($filter)&& \Request::get('filter') &&!is_null($search)) {
+            if (is_null($filter) && \Request::get('filter') && !is_null($search)) {
                     $filter = \Request::get('filter');
 
                 return redirect()->route('videoSearch',array('search'=>$search,'filter'=>$filter));
@@ -237,7 +237,7 @@ class VideoController extends Controller
                         $order = 'asc'; 
                         }
 
-                        if ($filter == 'alfa') {
+                         if ($filter == 'alfa') {
                         $column = 'title';
                         $order = 'asc';
                         }
