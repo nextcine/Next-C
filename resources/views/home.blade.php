@@ -34,16 +34,16 @@
                         </div>
 
                         <!-- botones de acciones  -->
-                                <a href="" class="btn btn-success">Ver</a>
+                      <a href="{{route('detailVideo',['video_id'=>$video->id])}}" class="btn btn-success">Ver</a>
                         @if(Auth::check() && Auth::user()->id == $video->user->id)
-                                <a href="" class="btn btn-warning">Editar</a>
+                           <a href="{{route('VideoEdit',['video_id'=>$video->id])}}" class="btn btn-warning">Editar</a>
                               
                                <!-- ventana modal para eliminar un video -->
 
-                  <div class="pull-right">
+                
 
                   <!-- Botón en HTML (lanza el modal en Bootstrap) -->
-                        <a href="#nextModal{{ $video->id }}" role="button" class="btn btn-sm btn-primary" data-toggle="modal">Eliminar</a>
+                        <a href="#nextModal{{ $video->id }}" role="button" class="btn btn btn-danger" data-toggle="modal">Eliminar</a>
                           
                         <!-- Modal / Ventana / Overlay en HTML -->
                         <div id="nextModal{{ $video->id }}" class="modal fade">

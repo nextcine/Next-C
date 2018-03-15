@@ -61,7 +61,34 @@ Route::get('/video-file/{filename}', array(
 )); 
 
 
-route::post('/comment', array (
+Route::get('/delete-video/{video_id}', array (
+
+	'as'=>'videoDelete',
+	'middleware'=>'auth',
+	'uses' =>'VideoController@delete'
+
+)); 
+
+Route::get('/editar-video/{video_id}', array (
+
+	'as'=>'VideoEdit',
+	'middleware'=>'auth',
+	'uses' =>'VideoController@edit'
+
+)); 
+
+Route::post('/update-video/{video_id}', array (
+
+	'as'=>'updateVideo',
+	'middleware'=>'auth',
+	'uses' =>'VideoController@update'
+
+)); 
+
+
+
+// comentario 
+Route::post('/comment', array (
 
 	'as'=>'comment',
 	'middleware'=>'auth',
@@ -70,7 +97,7 @@ route::post('/comment', array (
 )); 
 
 
-route::get('/delete-comment/{comment_id}', array (
+Route::get('/delete-comment/{comment_id}', array (
 
 	'as'=>'commentDelete',
 	'middleware'=>'auth',
@@ -79,10 +106,4 @@ route::get('/delete-comment/{comment_id}', array (
 )); 
 
 
-route::get('/delete-video/{video_id}', array (
 
-	'as'=>'videoDelete',
-	
-	'uses' =>'VideoController@delete'
-
-)); 
