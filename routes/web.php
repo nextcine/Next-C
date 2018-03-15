@@ -77,3 +77,12 @@ route::get('/delete-comment/{comment_id}', array (
 	'uses' =>'CommentController@delete'
 
 )); 
+
+
+route::get('/delete-video/{video_id}', array (
+
+	'as'=>'videoDelete',
+	
+	'uses' =>'VideoController@delete'
+
+)); 
