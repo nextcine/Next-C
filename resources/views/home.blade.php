@@ -16,7 +16,7 @@
 
               <div id="videos-list">
                 
-
+              @if(count($videos)>=1)
                 @foreach($videos as $video)
                     <div class="video-item col-md-10 pull-left panel panel-default">
                         <div class=" panel-body">
@@ -70,7 +70,10 @@
                         </div>
                     </div>
                 @endforeach
-                  
+
+                @else
+                <div class="alert alert-warning"> No hay resultados para su busqueda </div>
+                @endif  
     
                     
 

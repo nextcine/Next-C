@@ -37,13 +37,28 @@
                 <div class="collapse navbar-collapse" id="app-navbar-collapse">
                     <!-- Left Side Of Navbar -->
                     <ul class="nav navbar-nav">
-                        &nbsp;
+                       <li> <a href=" {{url('/home')}}">Inicio</a></li>
                     </ul>
+
+                <form class="navbar-form navbar-left" role="search" action="{{url('/buscar')}}"> 
+                    <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Que quieres buscar?" name="search"> 
+                    </div>
+                    <button type="submit" class="btn btn-default">
+                            <span class="glyphicon glyphicon-search"> </span> 
+
+                    </button>
+
+
+
+                </form>
 
                     <!-- Right Side Of Navbar -->
                     <ul class="nav navbar-nav navbar-right">
                         <!-- Authentication Links -->
+                        <li><a href="{{ url('/crear-video') }}">Subir video</a></li>
                         @if (Auth::guest())
+
                             <li><a href="{{ route('login') }}">Login</a></li>
                             <li><a href="{{ route('register') }}">Register</a></li>
                         @else

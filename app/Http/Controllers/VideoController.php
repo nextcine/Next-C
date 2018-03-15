@@ -205,4 +205,23 @@ class VideoController extends Controller
                 return redirect()->route('home')->with(array('message'=>'El video se a actualizado correctamente '));
 
     }
+
+    public function search($search = null){
+
+        if (is_null($search)) {
+           $search = \Request::get('search');
+
+                   }
+
+
+            $videos =Video::where('title','LIKE', '%'.$search.'%')->paginate(5);
+
+            return view('video.search',array(
+
+                    'videos' => $videos,
+                    'search'=> $search
+
+            ));
+
+    }
 }
