@@ -68,3 +68,12 @@ route::post('/comment', array (
 	'uses' =>'CommentController@store'
 
 )); 
+
+
+route::get('/delete-comment/{comment_id}', array (
+
+	'as'=>'commentDelete',
+	'middleware'=>'auth',
+	'uses' =>'CommentController@delete'
+
+)); 
