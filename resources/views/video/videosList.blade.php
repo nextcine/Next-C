@@ -14,7 +14,7 @@
                         @endif
                         <div class="data">
                            <a href="{{route('detailVideo',['video_id'=>$video->id])}}" class="video-title"><h2 >{{$video->title}}</h2></a> 
-                           <p>{{$video->user->name.''.$video->user->surname}}</p>
+                           <p> <a href="{{ route('channel',['user_id'=> $video->user->id]) }}">{{$video->user->name.''.$video->user->surname}}</a> |{{ \FormatTime::LongTimeFilter($video->created_at) }}</p>
                         </div>
 
                         <!-- botones de acciones  -->

@@ -21,7 +21,7 @@
 				
 				<div class="panel-heading">
 					<div class="panel-title">
-						Video Subido por <strong>{{$video->user->name.''.$video->user->surname}}</strong> <br> Creado : 
+						Video Subido por <strong> <a href="{{ route('channel',['user_id'=> $video->user->id]) }}">{{$video->user->name.''.$video->user->surname}}</a></strong> <br> Creado : 
 
 						<!-- se formatea la fecha con un helper -->
 

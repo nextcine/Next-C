@@ -213,6 +213,10 @@ class VideoController extends Controller
 
            return redirect()->route('videoSearch',array('search'=>$search));
 
+           if (is_null($search)) {
+              return redirect()->route('home');
+           }
+
         }
             if (is_null($filter) && \Request::get('filter') && !is_null($search)) {
                     $filter = \Request::get('filter');
@@ -243,7 +247,7 @@ class VideoController extends Controller
                         }
                 }
 
-            $videos =Video::where('title','LIKE', '%'.$search.'%')->orderby($column,$order)->paginate(5);
+            $videos =Video::where('title','LIKE', '%'.$search.'%')->orderBy($column,$order)->paginate(5);
 
             
 

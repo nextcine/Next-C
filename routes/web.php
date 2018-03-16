@@ -11,13 +11,13 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
 Auth::routes();
 
-Route::get('/home', array(
+Route::get('/', array(
 		'as'=>'home',
 	    'uses' => 'HomeController@index'));  
 
@@ -108,8 +108,17 @@ Route::get('/delete-comment/{comment_id}', array (
 
 // buscador de videos
 
-Route::get('/buscar/{search?}',[
+Route::get('/buscar/{search?}/{filter?}',[
 		'as'=>'videoSearch',
 		'uses' =>'VideoController@search'
+
+	]);
+
+
+// canal de peliculas de usuario
+
+Route::get('/canal/{user_id?}',[
+		'as'=>'channel',
+		'uses' =>'UserController@channel'
 
 	]);
